@@ -4,7 +4,7 @@ This is the official implementation of the following paper accepted to *NeurIPS 
 
 > **Distributionally Robust Skeleton Learning of Discrete Bayesian Networks**
 > 
-> Yeshu Li, Brian D. Ziebart
+> Yeshu Li and Brian D. Ziebart
 > 
 > *37th Conference on Neural Information Processing Systems (NeurIPS 2023)*
 > 
@@ -22,7 +22,7 @@ This is the official implementation of the following paper accepted to *NeurIPS 
 
 ## Data Preparation
 
-Download the data from [bnlearn](https://www.bnlearn.com/bnrepository/), [BN Repository](https://www.cs.huji.ac.il/w~galel/Repository/) and [Malone et al.](http://bnportfolio.cs.helsinki.fi/) or refer to the [released data](???) for the complete data adopted throughout our experiments.
+Download the data from [bnlearn](https://www.bnlearn.com/bnrepository/), [BN Repository](https://www.cs.huji.ac.il/w~galel/Repository/) and [Malone et al.](http://bnportfolio.cs.helsinki.fi/) or refer to the [released data](https://github.com/DanielLeee/drslbn/releases/download/pre/data.zip) for the complete data adopted throughout our experiments.
 
 ## Usage
 
