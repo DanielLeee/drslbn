@@ -10,14 +10,6 @@ import os
 import sys
 
 
-def skel_by_threshold(skel, thr = 0.1):
-
-    skel = (skel > thr)
-    skel = skel + skel.T
-
-    return skel
-
-
 def run_algorithm(data, method_name, epsilon = 0.1, start_skel = None):
 
     print('--------------------{}--------------------'.format(method_name))
@@ -103,7 +95,7 @@ def single_mode():
     noisy_samples = util.perturb_data(clean_samples_df, card_dict, noise_model, p_noise)
     est_weight_mat = run_algorithm(noisy_samples, method_name, epsilon)
     
-    est_skel = skel_by_threshold(est_weight_mat, thr = threshold)
+    est_skel = util.skel_by_threshold(est_weight_mat, thr = threshold)
     print('best:')
     print(est_skel)
     print('f1:')
@@ -145,9 +137,9 @@ def exp_mode_bif():
             est_skel_wass = run_algorithm(noisy_samples, 'dro_wass', epsilon = 1)
             est_skel_kl = run_algorithm(noisy_samples, 'dro_kl', epsilon = 1)
             est_skel_reg = run_algorithm(noisy_samples, 'reg_lr', epsilon = 0.01)
-            est_skel_wass = skel_by_threshold(est_skel_wass, thr = 0.1)
-            est_skel_kl = skel_by_threshold(est_skel_kl, thr = 0.1)
-            est_skel_reg = skel_by_threshold(est_skel_reg, thr = 0.1)
+            est_skel_wass = util.skel_by_threshold(est_skel_wass, thr = 0.1)
+            est_skel_kl = util.skel_by_threshold(est_skel_kl, thr = 0.1)
+            est_skel_reg = util.skel_by_threshold(est_skel_reg, thr = 0.1)
             est_skel_pc = run_algorithm(noisy_samples, 'pc')
             est_skel_grasp = run_algorithm(noisy_samples, 'grasp')
 
@@ -221,9 +213,9 @@ def exp_mode_real():
         est_skel_wass = run_algorithm(noisy_samples, 'dro_wass', epsilon = 1)
         est_skel_kl = run_algorithm(noisy_samples, 'dro_kl', epsilon = 1)
         est_skel_reg = run_algorithm(noisy_samples, 'reg_lr', epsilon = 0.01)
-        est_skel_wass = skel_by_threshold(est_skel_wass, thr = 0.1)
-        est_skel_kl = skel_by_threshold(est_skel_kl, thr = 0.1)
-        est_skel_reg = skel_by_threshold(est_skel_reg, thr = 0.1)
+        est_skel_wass = util.skel_by_threshold(est_skel_wass, thr = 0.1)
+        est_skel_kl = util.skel_by_threshold(est_skel_kl, thr = 0.1)
+        est_skel_reg = util.skel_by_threshold(est_skel_reg, thr = 0.1)
         est_skel_pc = run_algorithm(noisy_samples, 'pc')
         est_skel_grasp = run_algorithm(noisy_samples, 'grasp')
 

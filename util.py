@@ -8,6 +8,14 @@ import pandas as pd
 import os
 
 
+def skel_by_threshold(skel, thr = 0.1):
+
+    skel = (skel > thr)
+    skel = skel + skel.T
+
+    return skel
+
+
 def random_simplex(k):
 
     a = -np.log(np.random.rand(k))
