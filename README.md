@@ -12,6 +12,7 @@ This is the official implementation of the following paper accepted to *NeurIPS 
 
 ## Requirements
 
+- torch
 - numpy
 - scipy
 - pandas
