@@ -8,7 +8,7 @@ This is the official implementation of the following paper accepted to *NeurIPS 
 > 
 > *37th Conference on Neural Information Processing Systems (NeurIPS 2023)*
 > 
-> [[Proceeding]](???) [[Virtual]](https://nips.cc/virtual/2023/poster/71840) [[OpenReview]](https://openreview.net/forum?id=NpyZkaEEun) [[arXiv]](https://arxiv.org/abs/2311.06117) [[SlidesLive]](???)
+> [[Proceeding]](https://proceedings.neurips.cc/paper_files/paper/2023/hash/c80addda8bcd95339921cba7581ac7bd-Abstract-Conference.html) [[Virtual]](https://nips.cc/virtual/2023/poster/71840) [[OpenReview]](https://openreview.net/forum?id=NpyZkaEEun) [[arXiv]](https://arxiv.org/abs/2311.06117) [[SlidesLive]](https://slideslive.com/39009235)
 
 ## Requirements
 
